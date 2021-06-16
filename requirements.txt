@@ -1,2 +1,2 @@
 fasttext
-gensim=3.8.3
+gensim==3.8.3
