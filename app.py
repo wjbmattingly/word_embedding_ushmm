@@ -28,10 +28,11 @@ def main(model):
             final_files.append(file)
 
     st.title('USHMM Word Embedding Search')
+    st.write("Welcome to the USHMM Word Embedding Search Tool. This search engine is designed to allow for you to search for multiple words at the same time through a word embedding algorithm. The idea is to capture abstraction with a single search across documents. Values for each document are determined by proximity and depth in word embeddings relative to the initial search term.")
+    st.write("On the left, you can run your search. First, select rather you want to do a segment search (within all documents) or a document search (values are calculated by document). Next, write a word you wish to search for. Ideally, this should be something abstract, like 'hunger'. Next, select your limiting words. This ensures no false positives. For a first pass, always write the initial search term. Finally enter your tier design. This will affect how the net is cast into the word embeddings.")
 
     st.sidebar.image("images/si_logo.png")
     form = st.sidebar.form("Options")
-
     style_option = form.selectbox("How do you want to calculate values?", ("Segment", "Document"))
     keyword = form.text_input('Enter your key search word here:')
     limiting_words = form.text_input('Enter your limiting words here, separated by commas:')
